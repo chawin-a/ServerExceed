@@ -12,13 +12,12 @@ void ServerExceed::connectServer() {
 
   // Start the server
   server->begin();
-
+  
   // Register IP address to server
-  IPAddress ip = WiFi.localIP();
   WiFiClient client;
   client.setTimeout(50);
   client.connect(host, port);
-  client.print(String("GET ") + "/" + group + "/register/" + ip + " HTTP/1.0\r\n" +
+  client.print(String("GET ") + "/" + group + "/register/" + " HTTP/1.0\r\n" +
     "Host: " + host + "\r\n" +
     "Connection: close\r\n\r\n");
   delay(50);
