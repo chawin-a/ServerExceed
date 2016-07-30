@@ -4,11 +4,17 @@ WiFiServer server(80); // nodeMCU server : port 80
 ServerExceed mcu("ssid", "password", "host", port, "group", &server);
 
 void setup() {
-  Serial.begin(115200);
   mcu.connectServer();
 }
 
+String data = "";
+
 void loop() {
-  mcu.sendDataFromBoardToServer();
+  if(Serial.available()) {
+  	data = Serial.readStringUntil('\r');
+  	Serial.flush();
+  	mcu.sendDataFromBoardToServer(data);
+  }
   mcu.sendDataFromServerToBoard();
+  data = "";
 }
