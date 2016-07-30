@@ -43,6 +43,6 @@ void sendDataFromServerToBoard()
 
 // ใช้ใน loop เพื่อรอข้อมูลจาก Server แล้วส่งไปที่ Board
 
-void sendDataFromBoardToServer()
+void sendDataFromBoardToServer(String &data)
 
-// ใช้ใน loop เพื่อส่งข้อมูลจาก Board ไปที่ Server
+// ใช้ใน loop เพื่อส่ง data จาก Board ไปที่ Server
