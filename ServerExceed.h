@@ -33,7 +33,7 @@ class ServerExceed
     // Function
     void connectServer();
     void sendDataFromServerToBoard();
-    void sendDataFromBoardToServer();
+    void sendDataFromBoardToServer(String &data);
 };
 
 #endif

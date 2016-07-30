@@ -2,6 +2,7 @@
 #include "ServerExceed.h"
 
 void ServerExceed::connectServer() {
+  Serial.begin(115200);
   delay(10);
 
   // Connect to WiFi network
