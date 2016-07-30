@@ -45,4 +45,4 @@ void sendDataFromServerToBoard()
 
 void sendDataFromBoardToServer()
 
-// ใช้ใน loop เพื่อรอข้อมูลจาก Board แล้วส่งไปที่ Server
+// ใช้ใน loop เพื่อส่งข้อมูลจาก Board ไปที่ Server
