@@ -8,7 +8,7 @@ void ServerExceed::sendDataFromBoardToServer() {
   }
   // Read data from Serial
   String data = Serial.readStringUntil('\r');
-
+  Serial.flush();
   // Connect and send data to server
   WiFiClient client;
   client.setTimeout(50);
