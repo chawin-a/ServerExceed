@@ -14,7 +14,7 @@ ServerExceed mcu(ssid, password, host, port, group, &server);
 
 // Setting for Blynk
 char auth[] = "your-authentication";
-char blynk_host = "your-blynk-host";
+char blynk_host[] = "your-blynk-host";
 int blynk_port = 18442;
 
 void setup() {
@@ -36,4 +36,5 @@ void loop() {
   	mcu.sendDataFromBoardToServer(data);
   }
   mcu.sendDataFromServerToBoard();
+  Blynk.run();
 }

@@ -19,6 +19,6 @@ void ServerExceed::connectServer() {
   client.connect(host, port);
   client.print(String("GET ") + "/" + group + "/register/" + " HTTP/1.1\r\n" +
     "Host: " + host + "\r\n" +
-    "Connection: close\r\n\r\n");x
+    "Connection: close\r\n\r\n");
   delay(50);
 }
