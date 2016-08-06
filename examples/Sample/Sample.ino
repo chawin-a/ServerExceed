@@ -19,6 +19,8 @@ String data = "";
 void loop() {
   if(Serial.available()) {
   	data = Serial.readStringUntil('\r');
+  	data.replace("\r","");
+  	data.replace("\n","");
   	Serial.flush();
   	mcu.sendDataFromBoardToServer(data);
   }

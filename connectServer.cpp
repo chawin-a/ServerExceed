@@ -9,10 +9,8 @@ void ServerExceed::connectServer() {
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
   }
-
   // Start the server
   server->begin();
-  
   // Register IP address to server
   WiFiClient client;
   client.setTimeout(50);
